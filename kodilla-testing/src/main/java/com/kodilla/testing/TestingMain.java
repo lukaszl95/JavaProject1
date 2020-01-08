@@ -21,13 +21,13 @@ public class TestingMain {
         if (addResult == 3) {
             System.out.println("Test dodawania OK");
         } else {
-            System.out.println("Calculator has error!");
+            System.out.println("Błąd!");
         }
 
         if (subResult == 2) {
             System.out.println("Test odejmowania OK");
         } else {
-            System.out.println("Calculator has error!");
+            System.out.println("Błąd!");
         }
     }
 }
