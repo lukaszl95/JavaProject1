@@ -12,4 +12,10 @@ public class SimpleUser {
     public String getRealName(){
         return realName;
     }
+    /*public SimpleUser(String username) {
+        this.username = username;
+    }
+    public String getUsername() {
+        return username;
+    }*/
 }
