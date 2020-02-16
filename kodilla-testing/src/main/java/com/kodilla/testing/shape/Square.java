@@ -4,16 +4,14 @@ import java.util.Objects;
 
 public class Square implements Shape{
 
-    private String shapeName;
     private double side;
 
-    public Square(String shapeName, double side) {
-        this.shapeName = shapeName;
+    public Square(double side) {
         this.side = side;
     }
 
     public String getShapeName() {
-        return shapeName;
+        return "Square";
     }
 
     public double getField() {

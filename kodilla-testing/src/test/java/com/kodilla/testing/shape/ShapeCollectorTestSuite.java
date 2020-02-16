@@ -10,7 +10,7 @@ public class ShapeCollectorTestSuite {
     @Test
     public void testAddFigure() {
         ShapeCollector shapeCollector = new ShapeCollector();
-        Circle  testCircle= new Circle("testCircle", 10);
+        Circle  testCircle= new Circle(10);
 
         shapeCollector.addFigure(testCircle);
 
@@ -20,7 +20,7 @@ public class ShapeCollectorTestSuite {
     @Test
     public void testRemoveFigure() {
         ShapeCollector shapeCollector = new ShapeCollector();
-        Square testSquare = new Square("testSquare", 10);
+        Square testSquare = new Square(10);
 
         shapeCollector.addFigure(testSquare);
         boolean result = shapeCollector.removeFigure(testSquare);
@@ -32,7 +32,7 @@ public class ShapeCollectorTestSuite {
     @Test
     public void testRemoveFigureNotExisting() {
         ShapeCollector shapeCollector = new ShapeCollector();
-        Square testSquare = new Square("testSquare", 10);
+        Square testSquare = new Square(10);
 
         boolean result = shapeCollector.removeFigure(testSquare);
 
@@ -42,7 +42,7 @@ public class ShapeCollectorTestSuite {
     @Test
     public void testGetFigure() {
         ShapeCollector shapeCollector = new ShapeCollector();
-        Square testSquare = new Square("testSquare", 10);
+        Square testSquare = new Square( 10);
         shapeCollector.addFigure(testSquare);
 
         Shape retrievedFigure = shapeCollector.getFigure(0);
@@ -53,9 +53,9 @@ public class ShapeCollectorTestSuite {
     @Test
     public void testShowFigures() {
         ShapeCollector shapeCollector = new ShapeCollector();
-        Square testSquare = new Square("testSquare", 10);
-        Square testTriangle = new Square("testTriangle", 14);
-        Square testCircle = new Square("testCircle", 3);
+        Square testSquare = new Square(10);
+        Square testTriangle = new Square(14);
+        Square testCircle = new Square(3);
         shapeCollector.addFigure(testSquare);
         shapeCollector.addFigure(testCircle);
         shapeCollector.addFigure(testTriangle);
@@ -71,7 +71,7 @@ public class ShapeCollectorTestSuite {
     @Test
     public void testGetSquareField() {
         ShapeCollector shapeCollector = new ShapeCollector();
-        double squareField = shapeCollector.getShapeField(new Square("square", 3));
+        double squareField = shapeCollector.getShapeField(new Square(3));
 
         double squareFieldExpected = 3*3;
 
@@ -81,7 +81,7 @@ public class ShapeCollectorTestSuite {
     @Test
     public void testGetTriangleField() {
         ShapeCollector shapeCollector = new ShapeCollector();
-        double triangleField = shapeCollector.getShapeField(new Triangle("triangle", 2, 4));
+        double triangleField = shapeCollector.getShapeField(new Triangle(2, 4));
 
         double triangleFieldExpected = 0.5*2*4;
 
@@ -91,7 +91,7 @@ public class ShapeCollectorTestSuite {
     @Test
     public void testGetCircleField() {
         ShapeCollector shapeCollector = new ShapeCollector();
-        double circleField = shapeCollector.getShapeField(new Circle("circle", 5));
+        double circleField = shapeCollector.getShapeField(new Circle(5));
 
         double circleFieldExpected = 5*5*Math.PI;
 

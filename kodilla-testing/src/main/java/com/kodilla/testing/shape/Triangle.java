@@ -3,18 +3,16 @@ package com.kodilla.testing.shape;
 import java.util.Objects;
 
 public class Triangle implements Shape{
-    private String shapeName;
     private double height;
     private double base;
 
-    public Triangle(String shapeName, double height, double base) {
-        this.shapeName = shapeName;
+    public Triangle(double height, double base) {
         this.height = height;
         this.base = base;
     }
 
     public String getShapeName() {
-        return shapeName;
+        return "Triangle";
     }
 
     public double getField() {
