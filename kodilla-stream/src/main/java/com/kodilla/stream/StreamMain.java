@@ -1,12 +1,14 @@
 package com.kodilla.stream;
 
-import com.kodilla.stream.lambda.ExecuteSaySomething;
-import com.kodilla.stream.lambda.Processor;
+
+import com.kodilla.stream.beautifier.PoemBeautifier;
 
 public class StreamMain {
     public static void main(String[] args) {
-        Processor processor = new Processor();
-        ExecuteSaySomething executeSaySomething = new ExecuteSaySomething();
-        processor.execute(executeSaySomething);
+        PoemBeautifier poemBeautifier = new PoemBeautifier();
+
+        System.out.println(poemBeautifier.beautify("słowo", (word) -> word.toUpperCase()));
+        System.out.println(poemBeautifier.beautify("słowo", (word) -> "*" + word + "*"));
+        System.out.println(poemBeautifier.beautify("słowo", (word) -> word + " <-> " + word));
     }
 }
