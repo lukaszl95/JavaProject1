@@ -10,6 +10,6 @@ public interface ArrayOperations {
         return IntStream.range(0, numbers.length)
                 .map(n -> numbers[n])
                 .average()
-                .orElse(0);
+                .orElseThrow(IllegalArgumentException::new);
     }
 }
