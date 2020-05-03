@@ -18,8 +18,8 @@ public class ProductOrderService {
         boolean isSold = itemSaleService.sale(saleRequest.getUser(), saleRequest.getItem(), saleRequest.getTime());
 
         if (isSold) {
-            mailInformationService.inform(saleRequest.getUser(), saleRequest.getItem());
             itemSaleRepository.createSale(saleRequest.getUser(), saleRequest.getItem(), saleRequest.getTime());
+            mailInformationService.inform(saleRequest.getUser(), saleRequest.getItem());
             return new Sale(saleRequest.getUser(), true);
         } else {
             return new Sale(saleRequest.getUser(), false);
