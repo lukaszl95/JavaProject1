@@ -1,4 +1,4 @@
-package com.kodilla.exception.main;
+package com.kodilla.exception.test;
 
 import com.kodilla.exception.test.SecondChallenge;
 
