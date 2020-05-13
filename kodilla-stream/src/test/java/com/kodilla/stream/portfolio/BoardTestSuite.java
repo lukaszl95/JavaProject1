@@ -2,6 +2,7 @@ package com.kodilla.stream.portfolio;
 
 import org.junit.Assert;
 import org.junit.Test;
+
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
@@ -147,14 +148,14 @@ public class BoardTestSuite {
                 .filter(inProgressTasks::contains)
                 .flatMap(task -> task.getTasks().stream())
                 .map(date -> ChronoUnit.DAYS.between(date.getCreated(), LocalDate.now()))
-                .reduce(0L, (sum,current) -> sum = sum + current);
+                .reduce(0L, (sum, current) -> sum = sum + current);
 
         long tasks = project.getTaskLists().stream()
                 .filter(inProgressTasks::contains)
                 .flatMap(task -> task.getTasks().stream())
                 .count();
 
-        double result = days/tasks;
+        double result = days / tasks;
 
         Assert.assertEquals(10.0, result, 0.01);
     }

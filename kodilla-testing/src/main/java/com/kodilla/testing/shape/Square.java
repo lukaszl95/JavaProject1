@@ -2,7 +2,7 @@ package com.kodilla.testing.shape;
 
 import java.util.Objects;
 
-public class Square implements Shape{
+public class Square implements Shape {
 
     private double side;
 
@@ -15,6 +15,6 @@ public class Square implements Shape{
     }
 
     public double getField() {
-        return side*side;
+        return side * side;
     }
 }

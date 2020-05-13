@@ -2,7 +2,7 @@ package com.kodilla.good.patterns.challenges.zad3;
 
 public class Application {
 
-    public static void main (String[] args) throws Exception {
+    public static void main(String[] args) throws Exception {
 
         OrderRequestRetriever orderRetriever = new OrderRequestRetriever();
 

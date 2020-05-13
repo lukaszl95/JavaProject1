@@ -15,7 +15,7 @@ public class StatisticsCalculationTestSuite {
         Statistics statisticsMock = mock(Statistics.class);
         List<String> usersList = new ArrayList<>();
 
-        for (int i=0; i<10; i++) {
+        for (int i = 0; i < 10; i++) {
             usersList.add("User" + i);
         }
 
@@ -36,7 +36,7 @@ public class StatisticsCalculationTestSuite {
         Statistics statisticsMock = mock(Statistics.class);
         List<String> usersList = new ArrayList<>();
 
-        for (int i=0; i<10; i++) {
+        for (int i = 0; i < 10; i++) {
             usersList.add("user" + i);
         }
 
@@ -57,7 +57,7 @@ public class StatisticsCalculationTestSuite {
         Statistics statisticsMock = mock(Statistics.class);
         List<String> usersList = new ArrayList<>();
 
-        for (int i=0; i<10; i++) {
+        for (int i = 0; i < 10; i++) {
             usersList.add("user" + i);
         }
 
@@ -78,7 +78,7 @@ public class StatisticsCalculationTestSuite {
         Statistics statisticsMock = mock(Statistics.class);
         List<String> usersList = new ArrayList<>();
 
-        for (int i=0; i<10; i++) {
+        for (int i = 0; i < 10; i++) {
             usersList.add("user" + i);
         }
 
@@ -99,7 +99,7 @@ public class StatisticsCalculationTestSuite {
         Statistics statisticsMock = mock(Statistics.class);
         List<String> usersList = new ArrayList<>();
 
-        for (int i=0; i<10; i++) {
+        for (int i = 0; i < 10; i++) {
             usersList.add("user" + i);
         }
 
@@ -136,7 +136,7 @@ public class StatisticsCalculationTestSuite {
     public void testHundredUsers() {
         Statistics statisticsMock = mock(Statistics.class);
         List<String> usersList = new ArrayList<>();
-        for (int i=0; i<100; i++) {
+        for (int i = 0; i < 100; i++) {
             usersList.add("user" + i);
         }
         when(statisticsMock.usersNames()).thenReturn(usersList);

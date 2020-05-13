@@ -14,7 +14,7 @@ public class StatisticsCalculation {
         comments = statistics.commentsCount();
         if (users > 0) {
             usersPosts = (double) posts / users;
-            usersComments = (double) comments/users;
+            usersComments = (double) comments / users;
         } else {
             usersPosts = 0;
             postsComments = 0;

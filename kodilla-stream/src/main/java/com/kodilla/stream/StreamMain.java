@@ -5,6 +5,7 @@ package com.kodilla.stream;
 //import com.kodilla.stream.person.People;
 //import com.kodilla.stream.book.Book;
 //import com.kodilla.stream.book.BookDirectory;
+
 import com.kodilla.stream.forumuser.Forum;
 import com.kodilla.stream.forumuser.ForumUser;
 
@@ -20,9 +21,9 @@ public class StreamMain {
         Forum forum = new Forum();
 
         Map<Integer, ForumUser> par = forum.getUserList().stream()
-                .filter(forumUser -> forumUser.getSex()=='M')
-                .filter(forumUser -> Period.between(forumUser.getBirthDay(), LocalDate.now()).getYears()>=20)
-                .filter(forumUser -> forumUser.getPosts()>=1)
+                .filter(forumUser -> forumUser.getSex() == 'M')
+                .filter(forumUser -> Period.between(forumUser.getBirthDay(), LocalDate.now()).getYears() >= 20)
+                .filter(forumUser -> forumUser.getPosts() >= 1)
                 .collect(Collectors.toMap(ForumUser::getID, forumUser -> forumUser));
 
         par.entrySet().stream()
