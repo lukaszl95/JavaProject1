@@ -36,6 +36,12 @@ public class Bigmac {
         }
 
         public Bigmac build() {
+            if (bun.length() == 0) {
+                throw new IllegalStateException("Add Bun!");
+            }
+            if (burgers == 0) {
+                throw new IllegalStateException("Add Burgers");
+            }
             return new Bigmac(bun, burgers, sauces, ingredients);
         }
     }

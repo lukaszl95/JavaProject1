@@ -8,7 +8,7 @@ public class BigmacTestSuite {
     public void testBuildBigmac() {
         Bigmac bigmac = new Bigmac.BigmacBuilder()
                 .setBun("sesame roll")
-                .setBurgers(2)
+                //.setBurgers(2)
                 .setIngredients("onions")
                 .setIngredients("bacon")
                 .setSauces("space")
