@@ -5,6 +5,11 @@ import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
+@NamedQuery(
+        name = "Company.retrieveCompanyStartedWithLetters",
+        query = "FROM Company WHERE SUBSTRING(name, 1, 3) LIKE :LETTERS"
+)
+
 @Entity
 @Table(name = "COMPANIES")
 public class Company {
@@ -33,6 +38,11 @@ public class Company {
         return name;
     }
 
+    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "companies")
+    public List<Employee> getEmployees() {
+        return employees;
+    }
+
     private void setId(int id) {
         this.id = id;
     }
@@ -41,12 +51,7 @@ public class Company {
         this.name = name;
     }
 
-    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "companies")
-    public List<Employee> getEmployees() {
-        return employees;
-    }
-
-    public void setEmployees(List<Employee> employees) {
+    private void setEmployees(List<Employee> employees) {
         this.employees = employees;
     }
 }
