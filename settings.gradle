@@ -1,4 +1,3 @@
 rootProject.name = 'kodilla-spring-web'
 include 'kodilla-patterns'
-include 'kodilla-patterns'
-
+include 'kodilla-spring'
