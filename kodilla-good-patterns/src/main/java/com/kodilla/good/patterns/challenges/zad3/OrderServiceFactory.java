@@ -1,9 +1,9 @@
 package com.kodilla.good.patterns.challenges.zad3;
 
 public class OrderServiceFactory {
-    public static final String EXTRAFOODSHOP = "EXTRAFOODSHOP";
-    public static final String GLUTENFREESHOP = "GLUTENFREESHOP";
-    public static final String HEALTHYSHOP = "HEALTHYSHOP";
+    public static final String EXTRAFOODSHOP = "ES";
+    public static final String GLUTENFREESHOP = "GS";
+    public static final String HEALTHYSHOP = "HS";
 
     public static OrderService getOrderService(String orderServiceName) throws Exception {
         if (orderServiceName.toUpperCase().equals(EXTRAFOODSHOP)) {

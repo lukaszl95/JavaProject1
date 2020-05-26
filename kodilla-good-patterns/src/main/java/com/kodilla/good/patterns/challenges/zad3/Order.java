@@ -5,11 +5,13 @@ public class Order {
     private String product;
     private int price;
     private int quantity;
+    private  String shop;
 
-    public Order(String product, int price, int quantity) {
+    public Order(String product, int price, int quantity, String shop) {
         this.product = product;
         this.price = price;
         this.quantity = quantity;
+        this.shop = shop;
     }
 
     public String getProduct() {
@@ -22,5 +24,9 @@ public class Order {
 
     public int getQuantity() {
         return quantity;
+    }
+
+    public String getShop() {
+        return shop;
     }
 }
