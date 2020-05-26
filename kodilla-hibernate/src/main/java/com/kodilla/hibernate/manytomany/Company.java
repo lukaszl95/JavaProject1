@@ -13,8 +13,17 @@ import java.util.List;
 @Entity
 @Table(name = "COMPANIES")
 public class Company {
+    @Id
+    @GeneratedValue
+    @NotNull
+    @Column(name = "COMPANY_ID", unique = true)
     private int id;
+
+    @NotNull
+    @Column(name = "COMPANY_NAME")
     private String name;
+
+    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "companies")
     private List<Employee> employees = new ArrayList<>();
 
     public Company() {
@@ -24,21 +33,14 @@ public class Company {
         this.name = name;
     }
 
-    @Id
-    @GeneratedValue
-    @NotNull
-    @Column(name = "COMPANY_ID", unique = true)
     public int getId() {
         return id;
     }
 
-    @NotNull
-    @Column(name = "COMPANY_NAME")
     public String getName() {
         return name;
     }
 
-    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "companies")
     public List<Employee> getEmployees() {
         return employees;
     }

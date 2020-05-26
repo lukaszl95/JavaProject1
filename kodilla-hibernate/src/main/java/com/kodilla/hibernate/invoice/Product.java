@@ -9,8 +9,21 @@ import java.util.List;
 @Entity
 @Table(name = "PRODUCTS")
 public class Product {
+    @NotNull
+    @GeneratedValue
+    @Id
+    @Column(name = "PRODUCT_ID", unique = true)
     private int id;
+
+    @Column(name = "PRODUCT_NAME")
     private String name;
+
+    @OneToMany(
+            targetEntity = Item.class,
+            mappedBy = "product",
+            cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY
+    )
     private List<Item> items = new ArrayList<>();
 
     public Product(String name) {
@@ -20,25 +33,14 @@ public class Product {
     public Product() {
     }
 
-    @NotNull
-    @GeneratedValue
-    @Id
-    @Column(name = "PRODUCT_ID", unique = true)
     public int getId() {
         return id;
     }
 
-    @Column(name = "PRODUCT_NAME")
     public String getName() {
         return name;
     }
 
-    @OneToMany(
-            targetEntity = Item.class,
-            mappedBy = "product",
-            cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY
-    )
     public List<Item> getItems() {
         return items;
     }
